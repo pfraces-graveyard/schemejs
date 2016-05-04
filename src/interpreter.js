@@ -2,14 +2,6 @@
 
 var env = require('./env');
 
-var bool = function (expr) {
-  return expr ? '#t' : '#f';
-};
-
-var isTrue = function (expr) {
-  return expr === '#t' ? true : false;
-};
-
 var evalScheme = function (expr, scope) {
   scope = scope || env.root();
 
@@ -66,7 +58,7 @@ var evalScheme = function (expr, scope) {
   }
 
   if (expr[0] === 'if') {
-    return isTrue(evalScheme(expr[1], scope))
+    return evalScheme(expr[1], scope)
       ? evalScheme(expr[2], scope)
       : evalScheme(expr[3], scope);
   }
