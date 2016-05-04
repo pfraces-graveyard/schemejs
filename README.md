@@ -1,7 +1,7 @@
 schemejs
 ========
 
-Scheme interpreter and Scheme to JavaScript compiler
+Scheme interpreter
 
 References
 ----------
